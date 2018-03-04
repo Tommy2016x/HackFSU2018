@@ -1,0 +1,80 @@
+
+.header{
+  font-size:75px;
+  position: relative;
+  bottom: 6px;
+  color:#423E28;
+  animation-delay: 3s;
+  font-family: Georgia, serif;
+}
+.group{
+  font-size: 30px;
+  text-align: right;
+}
+.btn1{
+  display: inline-block;
+  margin:20px;
+  font-size: 30px;
+  position: relative;
+  font-family: Georgia, serif;
+}
+.btn2{
+  background-color: #50723c;
+   border: none;
+   color: white;
+   padding: 15px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 18px;
+  position: relative;
+   border-radius: 24px;
+   font-family: Georgia, serif;
+   left: 10px;
+
+}
+.Entire{
+  position: relative;
+  Top: 80px;
+}
+.OtherButton{
+  position: relative;
+  top: 10px;
+}
+.OtherButton{
+  background-color: #63b995;
+   border: none;
+   color: white;
+   padding: 15px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 18px;
+   margin-top: 5px;
+   border-radius: 24px;
+   font-family: Georgia, serif;
+}
+input[type=text] {
+    width: 20%;
+    padding: 8px 10px;
+    margin: 1px 2;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+.img{
+  height: 165px;
+    width: 165px;
+    margin-bottom: 35px;
+}
+.description{
+  font-family: Georgia, serif;
+  font-size: 20px;
+}
