@@ -5,7 +5,7 @@
   bottom: 6px;
   color:#423E28;
   animation-delay: 3s;
-  font-family: Georgia, serif;
+  font-family: sans-serif;
 }
 .group{
   font-size: 30px;
@@ -16,7 +16,7 @@
   margin:20px;
   font-size: 30px;
   position: relative;
-  font-family: Georgia, serif;
+  font-family: sans-serif;
 }
 .btn2{
   background-color: #50723c;
@@ -29,9 +29,12 @@
    font-size: 18px;
   position: relative;
    border-radius: 24px;
-   font-family: Georgia, serif;
+   font-family: sans-serif;
    left: 10px;
-
+}
+.btn2:hover{
+  transform:scale(1.1);
+transition: all 0.3s ease;
 }
 .Entire{
   position: relative;
@@ -53,8 +56,11 @@
    font-size: 18px;
    margin-top: 5px;
    border-radius: 24px;
-   font-family: Georgia, serif;
-
+   font-family: sans-serif;
+}
+.OtherButton:hover{
+  transform:scale(1.1);
+transition: all 0.3s ease;
 }
 input[type=text] {
     width: 20%;
@@ -77,7 +83,7 @@ input[type=text]:focus {
     margin-bottom: 35px;
 }
 .description{
-  font-family: Georgia, serif;
+  font-family: sans-serif;
   font-size: 20px;
 }
 .formOne{

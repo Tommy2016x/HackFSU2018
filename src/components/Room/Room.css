@@ -9,12 +9,12 @@
     font-size: 16px;
     margin-top: 20px;
     border-radius: 20px;
-    font-family: Georgia, serif;
+    font-family: sans-serif;
 }
 .groupName{
   color:#423e28;
-  font-size: 40px;
-  font-family: Georgia, serif
+  font-size: 55px;
+  font-family: sans-serif
 }
 
 .newUser{
@@ -28,11 +28,51 @@
    font-size: 15px;
    margin-top: 30px;
    border-radius: 24px;
-   font-family: Georgia, serif;
+   font-family: sans-serif;
+   margin-left: 15px;
+   margin-bottom: 15px;
+}
+.newUser:hover{
+transform:scale(1.1);
+transition: all 0.3s ease;
 }
 
 .main{
   position: relative;
   Top: 120px;
   min-height:100vh;
+}
+.category{
+  background-color: #86deb7;
+  width: 50%;
+  text-align: center;
+  position: relative;
+  left: 25%;
+  border: .5px solid black;
+  border-radius: 16px;
+}
+.unorderlist{
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2f3640;
+}.listelement{
+  float: left;
+}
+.atag{
+  display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.atag:hover{
+  background-color: #2f3640;
+  color:white;
+  text-decoration: none;
+}
+.atag:visited{
+  color:white;
+  text-decoration: none;
 }

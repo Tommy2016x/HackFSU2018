@@ -71,44 +71,56 @@ class Room extends Component{
 
     render(){
     	const {title, name, users, open} = this.state;
-    	console.log(users);
+    	if(this.state.auth)
+    	{
+	    	return <Redirect to={{
+	        	pathname:'/',
+	        
+	      	}}/>
+      	}
         return(
-            <div className="main">
-                <h2 className="groupName" >Group Name: {title.toUpperCase()}</h2>
-                <div>
-                </div>
-                <form onSubmit={(e) => {e.preventDefault()}}>
-                    <input type="text" value={name} onChange={this.handleInputChange}/>
-                    <button className="newUser" onClick={()=>{this.setState({open:true})}}> Click me for good time</button>
-                    <ReactPlaid
-                        apiKey="3b9cec9504c5fac79de585b8014e36"
-                        product= {["transactions"]}
-                        env={SANDBOX_ENV}
-                        clientName="plaidname"
-                        open={open}
-                        onSuccess={this.handleOnSuccess}
-                        onExit={() => {this.setState({open:false})}}
-                    /> 
-                </form>
-                <div>
-                    {users && 
-                    	users.map(user => user.transactions)
-                        .reduce((curr, next) => curr.concat(next), [])
-                        .filter((transaction) => transaction.category != null)
-                        .map((transaction, i) => {
-                        	let username;
-                        	if(users[i]){
-                        		username = users[i].name;
-                        	}                   
-                        	return (
-                        		<div>
-                        			<h1> {username} </h1>
-                        			<p key={i}>Categories: {transaction.category} <br/> Amount spent: {transaction.amount}</p>                 
-                    			</div>
-                    		)
-                        })
-                    }   
-                </div>
+        	<div>
+	        	<ul class="unorderlist">
+	        	<li class="listelement"><a onClick={()=>{this.setState({auth:true})}} class="active atag" href="#home">Home</a></li>
+	        	</ul>
+	            <div className="main">
+	            <img className="img" alt="no" src= {"https://personal-money-management.utah.edu/_images/money_icon.png"}/>
+	                <h2 className="groupName" >{title}</h2>
+	                <div>
+	                </div>
+	                <form onSubmit={(e) => {e.preventDefault()}}>
+	                    <input type="text" placeholder="Name" value={name} onChange={this.handleInputChange}/>
+	                    <button className="newUser" onClick={()=>{this.setState({open:true})}}> Add new user</button>
+	                    <ReactPlaid
+	                        apiKey="3b9cec9504c5fac79de585b8014e36"
+	                        product= {["transactions"]}
+	                        env={SANDBOX_ENV}
+	                        clientName="plaidname"
+	                        open={open}
+	                        onSuccess={this.handleOnSuccess}
+	                        onExit={() => {this.setState({open:false})}}
+	                    /> 
+	                </form>
+	                <div>
+	                    {users && 
+	                    	users.map(user => user.transactions)
+	                        .reduce((curr, next) => curr.concat(next), [])
+	                        .filter((transaction) => transaction.category != null)
+	                        .map((transaction, i) => {
+	                        	let username;
+	                        	if(users[i]){
+	                        		username = users[i].name;
+	                        	}                   
+	                        	return (
+	                        		<div>
+	                        			<h1 className="userName"> {username} </h1>
+	                        			<p className="category" key={i}>Categories: {transaction.category} <br/> Amount spent: {transaction.amount}</p>                 
+	                    			</div>
+	                    		)
+	                        })
+	                    }   
+	                </div>
+	            </div>
             </div>
         );
     }

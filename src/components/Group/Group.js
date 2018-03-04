@@ -81,7 +81,7 @@ class Group extends Component{
       <div className="Entire">
       <img className="img" alt="no" src= {"https://personal-money-management.utah.edu/_images/money_icon.png"}/>
         <h1 className="header">Cash Check</h1>
-        <p className= "description" >A tool to keep those near you in check</p>
+        <p className= "description" >A tool to keep those living with you in check</p>
         <form onSubmit={this.handleSubmit} className="formOne">
           <input className="btn1" type="text" onChange={this.handleInputChange} ref="title" value={this.state.createTitle} placeholder="create group"  name="createTitle"/>
           <button className="btn2" >Create Group</button>
