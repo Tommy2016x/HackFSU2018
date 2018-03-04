@@ -36,6 +36,7 @@
 .Entire{
   position: relative;
   Top: 80px;
+  min-height:100vh;
 }
 .OtherButton{
   position: relative;
@@ -53,6 +54,7 @@
    margin-top: 5px;
    border-radius: 24px;
    font-family: Georgia, serif;
+
 }
 input[type=text] {
     width: 20%;
@@ -77,4 +79,7 @@ input[type=text]:focus {
 .description{
   font-family: Georgia, serif;
   font-size: 20px;
+}
+.formOne{
+  padding-left: 13px;
 }
