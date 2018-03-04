@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
-import Group from './components/Group/Group';
 import Room from './components/Room/Room';
-import {Button,Grid,Row,Col} from 'react-bootstrap';
+import Group from './components/Group/Group';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import './App.css';
-import {fadeIn} from 'react-animations';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Room />
-      </div>
+    	<div className="App">
+    	<Router>
+	    	<Switch>
+	    		<Route exact path="/" component = {Group} />
+	    		<Route exact path="/room" component={Room}/>
+	    	</Switch>
+	    </Router>
+	    </div>
     );
   }
 }

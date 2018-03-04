@@ -34,4 +34,5 @@
 .main{
   position: relative;
   Top: 120px;
+  min-height:100vh;
 }
