@@ -80,8 +80,8 @@ class Room extends Component{
       	}
         return(
         	<div>
-	        	<ul class="unorderlist">
-	        	<li class="listelement"><a onClick={()=>{this.setState({auth:true})}} class="active atag" href="#home">Home</a></li>
+	        	<ul className="unorderlist">
+	        	<li className="listelement"><a onClick={()=>{this.setState({auth:true})}} class="active atag" href="#home">Home</a></li>
 	        	</ul>
 	            <div className="main">
 	            <img className="img" alt="no" src= {"https://personal-money-management.utah.edu/_images/money_icon.png"}/>
